@@ -1,6 +1,6 @@
 <?php
 
-$mysqli = new mysqli('localhost', 'root', '', 'pro');
+$mysqli = new mysqli('localhost', 'root', 'duck', 'pro');
 $result = $mysqli->query("SELECT * FROM `table 2`");
 $students = array();
 while ($test = $result->fetch_assoc()) {

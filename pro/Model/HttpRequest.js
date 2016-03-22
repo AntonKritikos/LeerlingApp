@@ -24,6 +24,8 @@ HttpRequest.prototype.load = function(url, callback)
             if(callback)
             {
                 // de data is in JSON formaat. Met JSON.parse() zetten we het eerst om naar een echt object
+
+
                 callback( JSON.parse(xmlhttp.responseText) );
             }
         }

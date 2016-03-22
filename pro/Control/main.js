@@ -6,5 +6,5 @@ function init()
   request.load("students.php", function(Students){
        console.log(Students);
   });
-
+    app.randomStudentsView.init(app.randomStudentsView);
 }

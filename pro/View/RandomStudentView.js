@@ -17,18 +17,14 @@ app.randomStudentsView = {
         var templateSrc = document.querySelector("#students-template").innerHTML;
 
         this.template = Handlebars.compile(templateSrc);
-        this.container = document.querySelector(".container");
+        this.container = document.querySelector(".name");
         this.shuffleButton = document.querySelector("#shuffle");
 
         // deze data moet UIT de view gehaald worden
         // jullie hebben je data in studentsModel.js staan!
         var testData = {
-            students: [
-                {firstName:"Gianni", id:0},
-                {firstName:"Luuk", id:1},
-                {firstName:"Joris", id:2},
-                {firstName:"Anton", id:3}
-            ]
+            firstName:"Gianni",
+            pid:0
         };
 
         // Transform the HTML template into a 'real' template
@@ -41,6 +37,7 @@ app.randomStudentsView = {
     },
 
     render:function(data){
+        console.log(data);
         this.container.innerHTML = this.template(data);
     },
 
