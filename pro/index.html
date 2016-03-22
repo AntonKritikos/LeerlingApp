@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="View/main.css">
+  </head>
+  <body>
+    <div class="mainDiv">
+      <h1>MD2 leerlingen app</h1>
+      <div class="randomDiv">
+        <p>
+          <strong>
+            Random leerling:
+          </strong>
+          <i class="shuffle">
+            (Shuffle)
+          </i>
+        </p>
+        <br>
+        <div class="imgDiv">
+          <img class="randomImg" src="View/Img/u4.png" alt="" />
+        </div>
+        <div class="studentDiv">
+          <h1 class="name">Voornaam Achternaam</h1>
+          <p class="info">"Voornaam" is een leerling van "190" cm. "Hij" zit in klas MD2A en behoort tot het geslacht "man".
+            "Zijn" ogen zijn "blauw".</p>
+        </div>
+      </div>
+      <div class="top3Div">
+        <h3><b>Top 3:<b></h3>
+        <select class="top3Select">
+          <option value="shortest">Kortste leerling</option>
+          <option value="longest">Langste leerling</option>
+          <option value="oldest">Oudste leerling</option>
+          <option value="youngest">Jongste leerling</option>
+        </select>
+        <table border="1">
+          <tr>
+            <th>1</th>
+            <td>Voornaam</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>Voornaam</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>Voornaam</td>
+          </tr>
+        </table>
+      </div>
+      <div class="allDiv">
+        <div class="visual">
+
+        </div>
+        <table border="1" class="allTable">
+          <tr>
+            <th>Voornaam</th>
+            <th>Achternaam</th>
+          </tr>
+          <tr class="names">
+            <td>Voornaam 1</td>
+            <td>Achternaam 1</td>
+          </tr>
+          <tr class="names">
+            <td>Voornaam 2</td>
+            <td>Achternaam 2</td>
+          </tr>
+          <tr class="names">
+            <td>Voornaam 3</td>
+            <td>Achternaam 3</td>
+          </tr>
+          <tr class="names">
+            <td>Voornaam 4</td>
+            <td>Achternaam 4</td>
+          </tr>
+          <tr>
+            <td>Voornaam 5</td>
+            <td>Achternaam 5</td>
+          </tr>
+          <tr class="names">
+            <td>Voornaam 6</td>
+            <td>Achternaam 6</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script id="students-template" type="text/x-handlebars-template">
+        {{#each students}}
+
+        <p>{{firstName}}</p>
+
+        {{/each}}
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <script type="text/javascript" src="Model/HttpRequest.js"></script>
+    <script type="text/javascript" src="Control/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+body
+{
+  font-family: Avantgarde, sans-serif;
+}
+.mainDiv
+{
+  width: 100%;
+  max-width: 720px;
+  height: 100%;
+  border: 1px black solid;
+  padding: 0 1%;
+}
+.randomDiv
+{
+  width: 100%;
+  height: 30%;
+  min-height: 230px;
+  border-bottom: 1px black solid;
+}
+.shuffle:hover
+{
+  cursor: pointer;
+  text-decoration: underline;
+}
+.randomDiv p
+{
+  display: inline-block;
+}
+.studentDiv
+{
+  float: left;
+  width: 75%;
+  height: 100px;
+  margin: 0;
+}
+.imgDiv
+{
+  float: left;
+  width: 25%;
+}
+.top3Div
+{
+  width: 100%;
+  height: 30%;
+  border-bottom: 1px black solid;
+}
+.top3Div h3
+{
+  display: inline-block;
+}
+.top3Div select
+{
+  padding: 5.5px;
+}
+.top3Div table
+{
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 2%;
+}
+.allDiv
+{
+  width: 100%;
+  height: 50%;
+  margin-top: 20px;
+}
+.allDiv table
+{
+  border-collapse: collapse;
+  width: 50%;
+  margin-bottom: 2%;
+}
+.allDiv .visual
+{
+  width: 30%;
+  height: 380px;
+  border: 1px black solid;
+  border-radius: 20px;
+  float: right;
+}
+.allDiv table th
+{
+  padding: 11px;
+}
+table td
+{
+  padding: 11px;
+}
+.allDiv table tr .names:hover
+{
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
