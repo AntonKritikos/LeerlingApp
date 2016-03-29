@@ -11,7 +11,7 @@ HttpRequest.prototype.load = function(url, callback)
     // om data op te kunnen halen hebben we een XMLHttpRequest nodig
     var xmlhttp = new XMLHttpRequest();
     // je geeft eerst de method GET/POST en de url door
-    xmlhttp.open("GET", url);
+    xmlhttp.open("GET", url)
     xmlhttp.send(); // met send() halen we de data op (asynchroon)
 
     // we luisteren of er iets gebeurd (foutmelding of succes)

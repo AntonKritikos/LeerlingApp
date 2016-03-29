@@ -22,7 +22,7 @@
           <img class="randomImg" src="View/Img/u4.png" alt="" />
         </div>
         <div class="studentDiv">
-          <h1 class="name">Voornaam Achternaam</h1>
+            <h1 class="name" data-id="{{id}}"></h1>
           <p class="info">"Voornaam" is een leerling van "190" cm. "Hij" zit in klas MD2A en behoort tot het geslacht "man".
             "Zijn" ogen zijn "blauw".</p>
         </div>
@@ -87,16 +87,19 @@
       </div>
     </div>
     <script id="students-template" type="text/x-handlebars-template">
-
-
-
-        {{firstName}}{{pid}}
-
-
+        {{firstname}}{{lastname}}
     </script>
+    <script id="sst" type="text/x-handlebars-template">
+        {{firstname}} is een leerling van {{height}}cm. {{firstname}} zit in de
+        klas MD2A en behoort tot het geslacht {{gender}}. zijn ogen zijn
+        {{eye_color}}
+    </script>
+    <script type="text/javascript" src="EL.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
     <script type="text/javascript" src="View/randomStudentView.js"></script>
     <script type="text/javascript" src="Model/HttpRequest.js"></script>
     <script type="text/javascript" src="Control/main.js"></script>
+    <script type="text/javascript" src="Model/studentsModel.js"></script>
   </body>
 </html>

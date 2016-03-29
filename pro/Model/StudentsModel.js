@@ -10,8 +10,22 @@ app.studentsModel.loadStudents = function() {
     // dit is de functie die de studenten ophaalt bij je PHP pagina
     // als de studenten zijn geladen, dan dispatcht hij een event
     // je view (bijvoorbeeld de randomStudentView) moet luisteren naar dit event
-    //
-    // this.dispatch("CHANGE"); // deze 'dispatch' pas uitvoeren als je studenten JSON is geladen
+    self = this;
+    var httpRequest = new HttpRequest();
+    httpRequest.load("students.php", function(data){
+        self.students = data;
+        self.dispatch("CHANGE");
+    })
+
+    // deze 'dispatch' pas uitvoeren als je studenten JSON is geladen
 };
+
+app.studentsModel.randomStudent = function(){
+    var rdstudent = Math.floor(Math.random() * this.students.length);
+    return this.students[rdstudent];
+}
+
+
+
 
 // welke functies heeft je model nog meer nodig? Maak ze hieronder aan.

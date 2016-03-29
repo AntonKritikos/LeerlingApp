@@ -15,41 +15,46 @@ app.randomStudentsView = {
 
         // Grab the template script from the dom
         var templateSrc = document.querySelector("#students-template").innerHTML;
-
+        var smallTemplateSrc = document.querySelector("#sst").innerHTML;
         this.template = Handlebars.compile(templateSrc);
+        this.stemplate = Handlebars.compile(smallTemplateSrc);
         this.container = document.querySelector(".name");
-        this.shuffleButton = document.querySelector("#shuffle");
-
+        this.smallContainer = document.querySelector(".info");
+        this.shuffleButton = document.querySelector(".shuffle");
         // deze data moet UIT de view gehaald worden
         // jullie hebben je data in studentsModel.js staan!
-        var testData = {
-            firstName:"Gianni",
-            pid:0
-        };
+
+        this.model.addListener("CHANGE",this.shuffleStudent.bind(this));
+
 
         // Transform the HTML template into a 'real' template
-        this.render(testData);
+
+
 
         // de functie bind() zorgt ervoor dat je kunt vastzetten waar 'this' naar verwijst
         this.shuffleButton.addEventListener("click", this.shuffleStudent.bind(this));
 
         this.container.addEventListener("click", this.studentClicked.bind(this));
+
     },
 
     render:function(data){
         console.log(data);
+        console.log(this.container)
         this.container.innerHTML = this.template(data);
+        this.smallContainer.innerHTML = this.stemplate(data);
     },
 
     shuffleStudent: function(e){
         // haal een random student op bij de model
         // en gebruik this.template() om vervolgens de template te updaten
-        console.log(this);
+        var rs = this.model.randomStudent();
 
         // als voorbeeld gooi ik de container met namen leeg. Ik mag nu bij this.container
         // omdat we met bind(this) zelf hebben gekozen waar 'this' naar moet verwijzen
-        this.container.innerHTML = "";
+        this.render(rs)
     },
+
 
     studentClicked: function(e){
 
