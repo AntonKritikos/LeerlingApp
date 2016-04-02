@@ -94,6 +94,14 @@
         klas MD2A en behoort tot het geslacht {{gender}}. zijn ogen zijn
         {{eye_color}}
     </script>
+    <script id="tableTemp" type="text/x-handlebars-template">
+        {{#each this}}
+        <tr>
+            <td>{{firstname}}</td>
+            <td>{{lastname}}</td>
+        </tr>
+        {{/each}}
+    </script>
     <script type="text/javascript" src="EL.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
@@ -101,5 +109,6 @@
     <script type="text/javascript" src="Model/HttpRequest.js"></script>
     <script type="text/javascript" src="Control/main.js"></script>
     <script type="text/javascript" src="Model/studentsModel.js"></script>
+    <script type="text/javascript" src="View/AllStudentsView.js"></script>
   </body>
 </html>

@@ -7,5 +7,6 @@ function init()
        //console.log(Students);
  // });
     app.randomStudentsView.init(app.studentsModel);
+    app.allStudentsList.init(app.studentsModel);
     app.studentsModel.loadStudents();
 }

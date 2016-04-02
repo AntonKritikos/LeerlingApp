@@ -15,6 +15,7 @@ app.studentsModel.loadStudents = function() {
     httpRequest.load("students.php", function(data){
         self.students = data;
         self.dispatch("CHANGE");
+
     })
 
     // deze 'dispatch' pas uitvoeren als je studenten JSON is geladen
@@ -24,6 +25,8 @@ app.studentsModel.randomStudent = function(){
     var rdstudent = Math.floor(Math.random() * this.students.length);
     return this.students[rdstudent];
 }
+
+app.studentsModel.allStudents = function(){return this.students;}
 
 
 

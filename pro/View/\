@@ -1,0 +1,15 @@
+var app = app || {};
+
+app.allStudentsList = {
+    init:function(model){
+        this.model = model;
+        this.templateSrc = document.querySelector("#tableTemp").innerHTML;
+        this.template = Handlebars.compile(this.templateSrc);
+        this.container = document.querySelector(".allTable");
+        this.model.addListener("LOADED_DATA",this.render(md))
+    },
+    render:function(md){
+        console.log(this.model)
+    //    this.container.innerHTML = this.template(this.model.allStudents());
+    }
+}
