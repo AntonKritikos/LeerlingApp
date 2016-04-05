@@ -87,12 +87,11 @@
       </div>
     </div>
     <script id="students-template" type="text/x-handlebars-template">
-        {{firstname}}{{lastname}}
+        {{firstname}} {{lastname}}
     </script>
     <script id="sst" type="text/x-handlebars-template">
-        {{firstname}} is een leerling van {{height}}cm. {{firstname}} zit in de
-        klas MD2A en behoort tot het geslacht {{gender}}. zijn ogen zijn
-        {{eye_color}}
+        {{firstname}} {{lastname}} is a {{gender}} with {{eye_color}} eyes and is {{height}} cm tall.<br> {{firstname}} is a student in class {{class}}.
+
     </script>
     <script id="tableTemp" type="text/x-handlebars-template">
         {{#each this}}
