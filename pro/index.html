@@ -94,10 +94,14 @@
 
     </script>
     <script id="tableTemp" type="text/x-handlebars-template">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+        </tr>
         {{#each this}}
         <tr>
-            <td>{{firstname}}</td>
-            <td>{{lastname}}</td>
+            <td data-id="{{id}}">{{firstname}}</td>
+            <td data-id="{{id}}">{{lastname}}</td>
         </tr>
         {{/each}}
     </script>
