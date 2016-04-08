@@ -19,5 +19,13 @@ app.allStudentsList = {
     getAllStudents:function(e){
                        var as = this.model.allStudents();
                        this.render(as)
-                   }
+    },
+    studentClicked: function(e){
+        var clickedRow = e.target,
+            id = clickedRow.dataset.id -1;
+        this.lengthVisual.style.height = this.model.allStudents()[id].height*2+"px";
+        for (var i = 0; i < this.eyeColor.length; i++) {
+          this.eyeColor[i].style.backgroundColor = this.model.allStudents()[id].eye_color;
+        }
+    }
 }
